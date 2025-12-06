@@ -7,4 +7,10 @@ EC2/ECR/EKS--IAM--Authontication and Aoutirization
 -Creating user --Authontication for AWS login.
                 -Autherizations uses roles and policyses  assign to IAM user to  write ,delete.
 
+==================================================
+after install Docker
+permission required due to ubuntu user didnt add to docker group or not used sudo
+so command for that 
+sudo usermod -aG  Docker ubuntu                 --user ubuntu added to the Docker group
+
 

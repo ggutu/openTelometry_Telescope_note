@@ -11,6 +11,10 @@ EC2/ECR/EKS--IAM--Authontication and Aoutirization
 after install Docker
 permission required due to ubuntu user didnt add to docker group or not used sudo
 so command for that 
-sudo usermod -aG  Docker ubuntu                 --user ubuntu added to the Docker group
+sudo usermod -aG <GroupName> <UserName>
+sudo usermod -aG  docker ubuntu  --user ubuntu added to the Docker group
+
+sudo systemctl status docker
+sudo system restart docker 
 
 

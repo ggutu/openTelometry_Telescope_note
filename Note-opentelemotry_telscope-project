@@ -1,0 +1,10 @@
+Reverse Proxy is middle man between the user and frontend/backend
+================================================================
+A reverse proxy is a server that sits in front of one or more web servers and forwards client (user) requests to those servers. It acts as an intermediary between the internet and your backend servers.
+Reverse proxy = “middleman” between users and your backend servers.
+
+EC2/ECR/EKS--IAM--Authontication and Aoutirization
+-Creating user --Authontication for AWS login.
+                -Autherizations uses roles and policyses  assign to IAM user to  write ,delete.
+
+

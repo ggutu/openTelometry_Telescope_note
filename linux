@@ -1,0 +1,2 @@
+**Change (update) an existing remote URL**
+     git remote set-url origin <new-repo-url>

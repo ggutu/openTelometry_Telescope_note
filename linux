@@ -1,2 +1,7 @@
 **Change (update) an existing remote URL**
      git remote set-url origin <new-repo-url>
+
+     ls -lrt 
+         gt remote -v
+Set a new remote (if not added yet)
+     -git remote add origin <your-repo-url>

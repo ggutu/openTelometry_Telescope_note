@@ -1,1 +1,12 @@
 I use mult stage build  dockerfile to make reduce the size of image and security to reduce security vernablity.
+once we build first part of stage then copy binary and dependancy to final stage
+whatever the documentations reading the documentation of each service
+
+cd to produc-catalog and write dockerfile based on documentations  and build image and push to ECR/dockerhub--golang programming language code 
+===========
+2nd microservice cd ad--java based project
+then write dockerfile and build images and push to registory 
+this java microservice build usin gradle  may said atleast jadk 17
+java need to install jdk21
+
+

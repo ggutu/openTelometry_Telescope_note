@@ -1,3 +1,6 @@
+
+good to watch ultimate project containerize microservices product-catalog(golang),add(java),recommendations(python ) specially the docker file writte 19,20,21.
+================================================================
 containirize java based microservice as well 
 I use mult stage build  dockerfile to make reduce the size of image and security to reduce security vernablity.
 once we build first part of stage then copy binary and dependancy to final stage

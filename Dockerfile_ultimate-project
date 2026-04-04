@@ -67,6 +67,25 @@ then any body in the orginizations team on the orginizations pull the image eg Q
 ==================
 one of the devops come in ask me i am running 10-15 commands individual
 
+create the container :
+Network 
+volume
+pull images --db need to run 
+run containers 
+this still manuall and take time
+
+==============
+docker compose write and docker compose up 
+yml
+  --
+  --
+network
+  --
+volume
+ --
+
+
+
 
 
 

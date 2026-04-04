@@ -19,4 +19,17 @@ java need to install jdk21
 when try to reach out the devloper for docmentations 
 recommendation_server.py is the main file on this program 
 
+FROM python:3.12-slim-bookworn AS base
+WORKDIR /usr/src/app
+COPY requirments.txt
+RUN pip install --upgrade pip
+Run pip install -r requirments.txt
+COPY . .
+ENTRYPOINT ["python", "recommendation_server.py"]
+
+when you run container the env variable must set so this expected we will fix when run docker compose or k&S
+we see when containirize using java ,go and python applications
+
+
+
 

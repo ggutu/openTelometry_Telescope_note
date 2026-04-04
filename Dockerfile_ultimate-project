@@ -29,7 +29,13 @@ ENTRYPOINT ["python", "recommendation_server.py"]
 
 when you run container the env variable must set so this expected we will fix when run docker compose or k&S
 we see when containirize using java ,go and python applications
-
+==================
+docker init write the dockerfile
+however docker init not work on ec2 only work on docker desktop
+command:
+docker init--- what the programming language used --version what port do want listen then create multi stage dockerfile.
+however you need to have prior expriance in case facing issue.
+vim dockerfile and modifies 
 
 
 

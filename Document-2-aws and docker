@@ -1,0 +1,47 @@
+Install t2.large ec2 and install docker and terraform then
+
+when i contanirize applications or docker compose up i face issue 
+***issue no space left on device
+
+There is volume of Ec2 8 GiB so this small size when i do real life project we need to have larg gib of storage,To do that we need to resize the volume and resize the file system as well.
+if look df -h 
+
+the 95% already used
+/dev/root       6.8G  6.4G  363M  95% /
+
+step 1: click on volume aws then increase the size then.
+Increasing the volume size in AWS does not automatically expand the filesystem inside the instance.
+
+step2: df -h checks 
+and lsblk 
+xvda     202:0    0   30G  0 disk   ----------30 gb is good
+├─xvda1  202:1    0    7G  0 part /  ---------but mounted is not updated still 7gb the one has forward slash
+├─xvda14 202:14   0    4M  0 part 
+Here we can see:
+
+The disk (xvda) is now 30 GB
+- mounted root partition (/) is still 7 GB
+o fully use the new storage space:
+
+Increase the volume size in AWS. ----Verify the disk using df -h and lsblk.----Resize the filesystem so the operating system can use the newly allocated space.
+steps  :sudo apt  install cloud-utils -y   # Amazon Linux
+        :sudo growpart /dev/xvda 1
+       : lsblk
+       : sudo resize2fs /dev/xvda1
+then the file system update operating system can newly allocated space
+
+this on real time updated similar manner under vpc
+open the the security group attached to the instance inorder to allow traffic inbound by default it block inbound  traffic .
+this ssh on instance by 22 port opened.
+====
+ curl http://localhost:8080/
+  curl http://54.82.150.219:8080/  --not https
+browser remove curl
+==================================================
+in my organization there is 20 microservice out of that i was working devlopment team which working three microservices such as payments ,transfer and checkout.
+my job to containirize these microservices as devops engineer.
+Example:payment--three steps--stage 1 Dockerfile 2.build docker image  stage3.create and run container .Information shared by devlopment team to through documentations enviroment variable 
+  
+===========================
+my repo couldnt push to remove while i paste pasword then it works while 
+Change repo remote to SSH    ---git remote set-url origin git@github.com:USERNAME/REPO.git

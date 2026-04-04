@@ -14,4 +14,9 @@ then write dockerfile and build images and push to registory
 this java microservice build usin gradle  may said atleast jadk 17
 java need to install jdk21
 
+==============================
+3rd recommendations service - python based 
+when try to reach out the devloper for docmentations 
+recommendation_server.py is the main file on this program 
+
 

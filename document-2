@@ -1,1 +1,43 @@
 
+The file seems to be a technical note or log written by the user, describing steps and observations related to working with AWS, Docker, EC2 instances, disk resizing, and managing microservices. Here's a breakdown of the content:
+
+***Key Points in the File:
+Setup on t2.large EC2 Instance:
+
+The user begins by highlighting the installation of Docker and Terraform on a t2.large EC2 instance.
+Disk Space Issue:
+
+When running Docker containers or docker-compose up, the user faced a "No space left on device" error.
+The root partition /dev/root had only 8 GiB of volume with 95% space already utilized.
+Disk Resize Solution:
+
+Increased the volume on AWS.
+Noted that increasing the volume (e.g., from 8 GiB to 30 GiB) does not automatically expand the filesystem inside the instance.
+Steps to fix the issue:
+Use cloud-utils to grow the partition (sudo growpart /dev/xvda 1).
+Resize the filesystem with resize2fs to utilize the newly allocated space.
+Security Group Configuration:
+
+Ensured inbound traffic is allowed by modifying the EC2 instance's security group.
+Opened SSH traffic on port 22 for secure shell access.
+Testing Reachability:
+
+Used curl to test service availability locally and via the public IP (e.g., http://54.82.150.219:8080/).
+Microservices Project:
+
+Worked in a development team handling 3 microservices: Payments, Transfer, and Checkout.
+The user's role as a DevOps engineer involved containerizing the microservices by:
+Writing Dockerfiles.
+Building Docker images.
+Creating and running the containers.
+Development teams provided environment variables and documentation to assist the DevOps workflow.
+Repository Remote Issue:
+
+Faced an issue where the GitHub repository could not be pushed until credentials (password) were added.
+Resolved by changing the Git repository’s remote URL to use SSH (git remote set-url origin).
+Purpose and Context
+This file appears to document challenges faced and solutions implemented, making it useful for:
+
+Team communication.
+Personal reference for recurring workflows.
+Sharing practices within DevOps or cloud development environments.
